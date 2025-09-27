@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { Menu } from "lucide-react";
-import { House } from "lucide-react";
-import { ArrowLeftRight } from "lucide-react";
-import { EqualApproximately } from "lucide-react";
-import { SquarePlus } from "lucide-react";
+import {
+  Menu,
+  X,
+  House,
+  ArrowLeftRight,
+  EqualApproximately,
+  SquarePlus,
+} from "lucide-react";
 import { NavLink } from "react-router";
 
 export default function Navbar() {
@@ -42,53 +45,70 @@ export default function Navbar() {
         <ul className="mt-4 space-y-2">
           {navItems?.map((i) => (
             <NavLink
-              className={({ isActive }) => (isActive ? "text-blue-600" : "")}
-              to={i?.href}
               key={i?.id}
+              to={i?.href}
+              className={({ isActive }) =>
+                `flex items-center gap-2 pt-2 font-semibold ${
+                  isActive ? "text-blue-600" : "text-gray-900"
+                }`
+              }
             >
-              <span className="flex items-center gap-2 pt-2 text-gray-800 font-semibold">
-                <span>{i?.icon}</span>
-                <span>{i?.navItem}</span>
-              </span>
+              <span>{i?.icon}</span>
+              <span>{i?.navItem}</span>
             </NavLink>
           ))}
         </ul>
       </div>
       {/* mobile Navbar */}
-      <div className="flex items-center justify-between p-4 shadow-md bg-white lg:hidden">
-        <h1 className="text-xl font-medium">My Expense Tracker</h1>
-        <button onClick={() => setOpen(true)}>
-          <Menu className="w-6 h-6" />
-        </button>
+      <div>
+        <div className="min-w-full bg-white border-b border-gray-100 shadow fixed top-0 right-0 left-0 flex items-center justify-between z-50 px-2 py-3 lg:hidden">
+          <button onClick={() => setOpen(!open)}>
+            {open ? (
+              <X className="w-6 h-6" /> // যখন open true হবে
+            ) : (
+              <Menu className="w-6 h-6" /> // যখন open false হবে
+            )}
+          </button>
+          <h1 className="flex items-center font-bold text-2xl">
+            <span>Cash</span>
+            <span className="text-blue-800">Flow</span>
+          </h1>
+          <div className="avatar avatar-online">
+            <div className="w-14 rounded-full">
+              <img src="https://img.daisyui.com/images/profile/demo/gordon@192.webp" />
+            </div>
+          </div>
+        </div>
+        {/* Backdrop */}
+        {open && (
+          <div
+            className="fixed inset-0 bg-black/50 z-40"
+            onClick={() => setOpen(false)}
+          ></div>
+        )}
       </div>
-      {/* Backdrop */}
-      {open && (
-        <div
-          className="fixed inset-0 bg-black/50 z-40"
-          onClick={() => setOpen(false)}
-        ></div>
-      )}
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 bg-white min-h-screen w-72 shadow-lg z-50 transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 bg-white min-h-screen w-72 shadow-lg z-40 transform transition-transform duration-300 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="p-4">
-          <h2 className="text-lg font-semibold">Menu</h2>
+        <div className="p-4 mt-20">
           <ul className="mt-4 space-y-2">
             {navItems?.map((i) => (
               <NavLink
-                className={({ isActive }) => (isActive ? "text-blue-600" : "")}
-                to={i?.href}
                 key={i?.id}
+                to={i?.href}
+                className={({ isActive }) =>
+                  `flex items-center gap-2 pt-2 font-semibold ${
+                    isActive ? "text-blue-600" : "text-gray-900"
+                  }`
+                }
                 onClick={() => setOpen(false)}
               >
-                <span className="flex items-center gap-2 pt-2 text-gray-800 text-lg font-semibold">
-                  <span>{i?.icon}</span>
-                  <span>{i?.navItem}</span>
-                </span>
+                <span>{i?.icon}</span>
+                <span>{i?.navItem}</span>
               </NavLink>
             ))}
           </ul>
