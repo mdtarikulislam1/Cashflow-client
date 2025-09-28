@@ -32,22 +32,7 @@ This project helps users visualize their financial data clearly using **Bar Char
 
 ## 📂 Project Structure
 
-```
-
-├── components
-│    ├── Footer.jsx
-│    ├── MonthlyChart.jsx
-│    ├── Navbar.jsx
-│    ├── StaticBrowserPie.jsx
-│    ├── Table.jsx
-│    ├── Total.jsx
-├── Layout
-├── pages
-│    └── Home.jsx
-├── App.jsx
-└── index.js
-
-````
+![Browser Pie Chart](https://i.postimg.cc/zfCzt65w/Screenshot-2025-09-28-160712.png)
 
 ---
 
