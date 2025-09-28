@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from "recharts";
 
 export default function MonthlyChart({ data }) {
@@ -31,17 +31,22 @@ export default function MonthlyChart({ data }) {
   }, [data]);
 
   return (
-    <div>
-        <h4 className="font-bold text-2xl py-5 text-center">Monthly Cash<span className="text-blue-700">Flow</span></h4>
-      <BarChart width={400} height={500} data={chartData}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="month" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="income" fill="#4caf50" />
-        <Bar dataKey="expense" fill="#f44336" />
-      </BarChart>
+    <div style={{ width: "100%", height: 500 }}>
+      <h4 className="font-bold text-2xl py-5 text-center">
+        Monthly Cash<span className="text-blue-700">Flow</span>
+      </h4>
+
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart data={chartData}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="month" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="income" fill="#4caf50" />
+          <Bar dataKey="expense" fill="#f44336" />
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 }

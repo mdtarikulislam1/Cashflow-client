@@ -35,7 +35,7 @@ export default function Cashflow() {
           </h4>
           <Table data={data} />
           <div className="my-10 flex flex-col justify-center gap-8 lg:flex-row">
-             <MonthlyChart data={data}/>
+           <div className="my-8">  <MonthlyChart data={data}/></div>
             <StaticBrowserPie/>
           </div>
         </div>
