@@ -1,3 +1,8 @@
+ঠিক আছে 👍 আমি দেখলাম তোমার README.md-তে কিছু ছোট সমস্যা আছে যা GitHub-এ rendering বা clickable links ঠিকভাবে দেখাতে বাধা দিতে পারে। আমি সেটা ঠিক করে তোমার জন্য সম্পূর্ণ cleaner version বানিয়ে দিলাম।
+
+---
+
+### ✅ ঠিক করা README.md
 
 ```markdown
 # 💰 Income & Expense Tracker
@@ -28,33 +33,19 @@ This project helps users visualize their financial data clearly using **Bar Char
 ## 📂 Project Structure
 
 ```
-src/
-├── Components
+
+├── components
 │    ├── Footer.jsx
 │    ├── MonthlyChart.jsx
 │    ├── Navbar.jsx
 │    ├── StaticBrowserPie.jsx
 │    ├── Table.jsx
 │    ├── Total.jsx
-│
-│
 ├── Layout
-│    ├── Footer.jsx
-│
-│
 ├── pages
-│    ├── About.jsx
-│    ├── AddData.jsx
-│    ├── CashFlow.jsx
-│    ├── Error.jsx
-│    ├── Home.jsx
-│
-├── Routes
-│    ├── Router.jsx
-│
-│
-└── index.css
-└── main.jsx
+│    └── Home.jsx
+├── App.jsx
+└── index.js
 
 ````
 
@@ -97,6 +88,8 @@ src/
 ---
 
 ## 📊 Example Data Structure
+
+![Browser Pie Chart](https://i.postimg.cc/zfCzt65w/Screenshot-2025-09-28-160712.png)
 
 ```json
 [
