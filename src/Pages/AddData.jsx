@@ -19,7 +19,7 @@ export default function AddData() {
       };
 
       const res = await axios.post(
-        "https://cashflow-client-six.vercel.app/api/cashflows",
+        "https://cashflow-server-blue.vercel.app/api/cashflows",
         newData
       );
 
