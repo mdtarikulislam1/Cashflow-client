@@ -1,21 +1,11 @@
-```markdown
-# 💰 Income & Expense Tracker
-
-## 📜 License
-
-This project is licensed under the MIT License.
-
-## 🔗 Live Demo
-[Live Website](https://cashflow-client-six.vercel.app/)
-
-## 🔗 Server repo
-[Server Repo](https://github.com/mdtarikulislam1/Cashflow-server)
-
-## 🔗 Client repo
-[Client Repo](https://github.com/mdtarikulislam1/Cashflow-client)
-
+ঠিক আছে 👍 আমি দেখলাম তোমার README.md-তে কিছু ছোট সমস্যা আছে যা GitHub-এ rendering বা clickable links ঠিকভাবে দেখাতে বাধা দিতে পারে। আমি সেটা ঠিক করে তোমার জন্য সম্পূর্ণ cleaner version বানিয়ে দিলাম।
 
 ---
+
+### ✅ ঠিক করা README.md
+
+```markdown
+# 💰 Income & Expense Tracker
 
 A web application to track **income and expenses** with interactive charts.  
 This project helps users visualize their financial data clearly using **Bar Chart** and **Pie Chart** (browser visits or any static analytics).
@@ -43,10 +33,17 @@ This project helps users visualize their financial data clearly using **Bar Char
 ## 📂 Project Structure
 
 ```
-
 ![Browser Pie Chart](https://i.postimg.cc/zfCzt65w/Screenshot-2025-09-28-160712.png)
 
 ````
+
+---
+
+## 🔗 Links
+
+- **Live Demo:** [Live Website](https://cashflow-client-six.vercel.app/)  
+- **Server Repo:** [Server Repo](https://github.com/mdtarikulislam1/Cashflow-server)  
+- **Client Repo:** [Client Repo](https://github.com/mdtarikulislam1/Cashflow-client)
 
 ---
 
@@ -56,7 +53,6 @@ This project helps users visualize their financial data clearly using **Bar Char
    ```bash
    git clone https://github.com/mdtarikulislam1/Cashflow-client.git
    cd Cashflow-client
-
 ````
 
 2. Install dependencies:
@@ -106,12 +102,19 @@ This project helps users visualize their financial data clearly using **Bar Char
 
 ## 📸 Screenshots
 
-## 📊 Monthly Bar Chart
+### 📊 Monthly Bar Chart
+
 ![Monthly Bar Chart](https://i.postimg.cc/xCJTn8VZ/Screenshot-2025-09-28-154015.png)
 
-## 🥧 Browser Pie Chart
+### 🥧 Browser Pie Chart
+
 ![Browser Pie Chart](https://i.postimg.cc/VkgNF2Fq/Screenshot-2025-09-28-154032.png)
 
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
 
 ---
 
