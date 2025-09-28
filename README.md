@@ -8,11 +8,12 @@ This project is licensed under the MIT License.
 ## 🔗 Live Demo
 [Live Website](https://cashflow-client-six.vercel.app/)
 
-## 🔗 LiveSite repo
-[Live Repo](https://github.com/mdtarikulislam1/Cashflow-client)
-
 ## 🔗 Server repo
 [Server Repo](https://github.com/mdtarikulislam1/Cashflow-server)
+
+## 🔗 Client repo
+[Client Repo](https://github.com/mdtarikulislam1/Cashflow-client)
+
 
 ---
 
@@ -43,32 +44,7 @@ This project helps users visualize their financial data clearly using **Bar Char
 
 ```
 
-/src
-├── Components
-│    ├── Footer.jsx   # Shows bar chart of income vs expense
-│    ├── MonthlyChart.jsx # Shows Total cashflow in chart
-│    ├── Navbar.jsx # Mobile responsive
-│    ├── StaticBrowserPie.jsx # Shows static pie chart of browser visits
-│    ├── Table.jsx # Shows history by table
-│    ├── Total.jsx # Shows Total data by card and finter by date month week 
-│
-│
-├── Layout
-│    ├── RootLayout.jsx
-│
-├── Page
-│    ├── About.jsx
-│    ├── AddData.jsx
-│    ├── CashFlow.jsx
-│    ├── Error.jsx
-│    ├── Home.jsx
-│
-├── Routes
-│    ├── Router.jsx
-│   
-│   
-└── index.css
-└── main.jsx
+![Browser Pie Chart](https://i.postimg.cc/zfCzt65w/Screenshot-2025-09-28-160712.png)
 
 ````
 
@@ -143,6 +119,3 @@ This project helps users visualize their financial data clearly using **Bar Char
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-
-
-```
