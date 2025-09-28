@@ -9,7 +9,7 @@ export default function Cashflow() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/allData");
+        const response = await axios.get("https://cashflow-client-six.vercel.app/api/allData");
         setData(response.data.data); 
       } catch (err) {
         console.error(err);
@@ -23,7 +23,7 @@ export default function Cashflow() {
     <div>
       <div>
         <Total data={data}/>
-       <div className="w-[400px] px-3 sm:w-[600px] mx-auto">
+       <div className="w-[400px] px-3 sm:w-[600px] mx-auto md:w-[800px] lg:w-full">
          <Table data={data}/>
        </div>
       </div>

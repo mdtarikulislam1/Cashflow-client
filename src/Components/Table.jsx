@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronRight, EllipsisVertical } from "lucide-react";
 
 export default function Table({ data }) {
   const [openIndex, setOpenIndex] = useState(null);
@@ -15,22 +15,22 @@ export default function Table({ data }) {
   }
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto overflow-y-auto text-nowrap">
       <table className="min-w-full border border-gray-200 divide-y divide-gray-200">
         <thead className="bg-gray-100">
           <tr>
             <th className="px-4 py-2"></th>
-            <th className="px-4 py-2 text-left">Name</th>
-            <th className="px-4 py-2 text-right">Calories</th>
-            <th className="px-4 py-2 text-right">Fat</th>
-            <th className="px-4 py-2 text-right">Carbs</th>
-            <th className="px-4 py-2 text-right">Protein</th>
+            <th className="px-4 py-2 text-left">Type</th>
+            <th className="px-4 py-2 text-right">Date</th>
+            <th className="px-4 py-2 text-right">Category</th>
+            <th className="px-4 py-2 text-right">Method</th>
+            <th className="px-4 py-2 text-right">Amount</th>
+            <th className="px-4 py-2">Option</th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
           {data.map((row, index) => (
             <React.Fragment key={index}>
-              {/* Main Row */}
               <tr
                 className="hover:bg-gray-50 cursor-pointer"
                 onClick={() => toggleRow(index)}
@@ -43,16 +43,18 @@ export default function Table({ data }) {
                   )}
                 </td>
                 <td className="px-4 py-2">{row.type}</td>
-                <td className="px-4 py-2 text-right">{row.amount}</td>
-                <td className="px-4 py-2 text-right">{row.category}</td>
-                <td className="px-4 py-2 text-right">{row.carbs || "-"}</td>
-                <td className="px-4 py-2 text-right">{row.protein || "-"}</td>
+                <td className="px-4 py-2 text-right">{row?.addDate}</td>
+                <td className="px-4 py-2 text-right">{row?.category}</td>
+                <td className="px-4 py-2 text-right">{row.method || "-"}</td>
+                <td className="px-4 py-2 text-right">{row.amount || "-"}</td>
+                <td className="px-4 py-2 flex justify-end">
+                  <EllipsisVertical size={20} />
+                </td>
               </tr>
 
-              {/* Collapsible Row */}
               {openIndex === index && (
                 <tr>
-                  <td colSpan="6" className="px-4 py-2 bg-gray-50">
+                  <td colSpan="6" className="px-4 py-2">
                     <div className="p-2">
                       <p className="text-sm text-gray-600">{row.description}</p>
                     </div>
