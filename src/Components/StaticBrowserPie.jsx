@@ -51,7 +51,6 @@ export default function StaticBrowserPie() {
         Bro<span className="text-blue-700">wser</span> Visits
       </h3>
 
-      {/* Responsive container keeps chart scalable */}
       <ResponsiveContainer width="100%" height={400}>
         <PieChart>
           <Pie
@@ -60,8 +59,8 @@ export default function StaticBrowserPie() {
             nameKey="name"
             cx="50%"
             cy="50%"
-            outerRadius="60%"   // responsive radius
-            innerRadius="30%"   // responsive inner radius
+            outerRadius="60%"   
+            innerRadius="30%"  
             paddingAngle={3}
             label={({ percent, index }) =>
               hoveredIndex === index ? `${Math.round(percent * 100)}%` : ""
