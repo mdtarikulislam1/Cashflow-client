@@ -1,10 +1,10 @@
 import { createBrowserRouter } from 'react-router'
-import Home from '../Pages/Home'
 import Rootlayouts from '../Layout/Rootlayouts'
-import About from '../Pages/About'
 import AddData from '../Pages/AddData'
 import Cashflow from '../Pages/Cashflow'
 import Error from '../Pages/Error'
+import About from '../Pages/About'
+import Home from '../Pages/Home'
 
 export const  router = createBrowserRouter([
      {
