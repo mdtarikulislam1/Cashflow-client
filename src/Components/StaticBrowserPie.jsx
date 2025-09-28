@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   PieChart,
   Pie,
@@ -9,7 +9,6 @@ import {
 } from "recharts";
 
 // Data
-
 const data = [
   { name: "Chrome", value: 6200 },
   { name: "Firefox", value: 900 },
@@ -44,13 +43,16 @@ function CustomTooltip({ active, payload }) {
 }
 
 export default function StaticBrowserPie() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
-    <div style={{ width: "100%", maxWidth: 600, overflow: 'hidden', margin: "4px" }}>
+    <div className="w-full max-w-4xl mx-auto px-4">
       <h3 className="text-2xl font-bold text-center py-5">
-        Bro<span className="text-blue-700">wser</span> Visits 
+        Bro<span className="text-blue-700">wser</span> Visits
       </h3>
 
-      <ResponsiveContainer width="100%" height={350}>
+      {/* Responsive container keeps chart scalable */}
+      <ResponsiveContainer width="100%" height={400}>
         <PieChart>
           <Pie
             data={data}
@@ -58,12 +60,14 @@ export default function StaticBrowserPie() {
             nameKey="name"
             cx="50%"
             cy="50%"
-            outerRadius={110}
-            innerRadius={50} 
+            outerRadius="60%"   // responsive radius
+            innerRadius="30%"   // responsive inner radius
             paddingAngle={3}
-            label={({ name, percent }) =>
-              `${name} (${Math.round(percent * 100)}%)`
+            label={({ percent, index }) =>
+              hoveredIndex === index ? `${Math.round(percent * 100)}%` : ""
             }
+            onMouseEnter={(_, index) => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
             {data.map((entry, index) => (
               <Cell

@@ -31,7 +31,7 @@ export default function MonthlyChart({ data }) {
   }, [data]);
 
   return (
-    <div style={{ width: "100%", height: 500 }}>
+    <div style={{ maxwidth: "98%", height: 500 }}>
       <h4 className="font-bold text-2xl py-5 text-center">
         Monthly Cash<span className="text-blue-700">Flow</span>
       </h4>
