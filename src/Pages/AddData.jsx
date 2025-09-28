@@ -37,7 +37,7 @@ export default function AddData() {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Something went wrong!",
+        text: `${err?.text}`,
       });
     }
   };

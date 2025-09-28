@@ -64,9 +64,9 @@ export default function Navbar() {
         <div className="min-w-full bg-white border-b border-gray-100 shadow fixed top-0 right-0 left-0 flex items-center justify-between z-50 px-2 py-3 lg:hidden">
           <button onClick={() => setOpen(!open)}>
             {open ? (
-              <X className="w-6 h-6" /> // যখন open true হবে
+              <X className="w-6 h-6" /> 
             ) : (
-              <Menu className="w-6 h-6" /> // যখন open false হবে
+              <Menu className="w-6 h-6" /> 
             )}
           </button>
           <h1 className="flex items-center font-bold text-2xl">
@@ -79,7 +79,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        {/* Backdrop */}
+        
         {open && (
           <div
             className="fixed inset-0 bg-black/50 z-40"

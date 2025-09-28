@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 export default function Total({ data }) {
-  const [filterType, setFilterType] = useState("all"); // today | week | month | year | range
+  const [filterType, setFilterType] = useState("all"); 
   const [range, setRange] = useState({ start: "", end: "" });
 
   const isSameDay = (d1, d2) =>
@@ -30,7 +30,6 @@ export default function Total({ data }) {
     return { start, end };
   };
 
-  // Filter Function
   const filterData = () => {
     if (!data) return [];
 
@@ -65,7 +64,7 @@ export default function Total({ data }) {
         return itemDate >= start && itemDate <= end;
       }
 
-      return true; // "all"
+      return true; 
     });
   };
 
@@ -83,7 +82,7 @@ export default function Total({ data }) {
   return (
     <div className="p-4 max-w-2xl mx-auto">
       {/* Filter Options */}
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap gap-2 mb-8">
         {["all", "today", "week", "month", "year", "range"].map((f) => (
           <button
             key={f}
@@ -109,7 +108,7 @@ export default function Total({ data }) {
         ))}
       </div>
 
-      {/* Date Range Picker */}
+      {/* Date Range */}
       {filterType === "range" && (
         <div className="flex gap-2 items-center mb-4">
           <div className="flex items-center gap-1">
@@ -148,7 +147,7 @@ export default function Total({ data }) {
             </div>
           </div>
           <div className="bg-[#4d4dff] flex items-center justify-center w-12 h-12 rounded-full">
-            <BanknoteArrowDown size={30} color="white" />
+            <BanknoteArrowUp size={30} color="white" />
           </div>
           <div className="absolute bottom-0 left-0">
             <svg
