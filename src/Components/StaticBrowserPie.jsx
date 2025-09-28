@@ -45,7 +45,7 @@ function CustomTooltip({ active, payload }) {
 
 export default function StaticBrowserPie() {
   return (
-    <div style={{ width: "100%", maxWidth: 600, margin: "4px" }}>
+    <div style={{ width: "100%", maxWidth: 600, overflow: 'hidden', margin: "4px" }}>
       <h3 className="text-2xl font-bold text-center py-5">
         Bro<span className="text-blue-700">wser</span> Visits 
       </h3>

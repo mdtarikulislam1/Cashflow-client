@@ -29,14 +29,16 @@ export default function Cashflow() {
     <div>
       <div>
         <Total data={data} />
-        <div className="w-[400px] px-3 sm:w-[600px] mx-auto md:w-[800px] lg:w-full mt-5">
+        <div className="w-[400px] sm:w-[600px] mx-auto md:w-[800px] lg:w-full mt-5 overflow-hidden">
           <h4 className="text-center font-bold text-2xl py-4">
             Total His<span className="text-blue-700">tory</span>
           </h4>
           <Table data={data} />
-          <div className="my-10 flex flex-col justify-center gap-8 lg:flex-row">
+          <div className="mb-20 flex flex-col justify-center gap-8 lg:flex-row">
            <div className="my-8">  <MonthlyChart data={data}/></div>
-            <StaticBrowserPie/>
+           <div className="my-8">
+             <StaticBrowserPie/>
+           </div>
           </div>
         </div>
       </div>
